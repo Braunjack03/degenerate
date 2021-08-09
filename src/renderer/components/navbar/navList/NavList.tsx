@@ -37,18 +37,12 @@ export default function NavList({
         <a href="/#traits">Rarity</a>
       </animated.div>
       <animated.div style={trail[4]} >
-        <Link to="/rarities">Academy Rarity</Link>
+        <Link to="/rarities">Academy Traits</Link>
       </animated.div>
       <animated.div style={trail[5]}>
         <a href="/#faqs">Faq</a>
       </animated.div>
-      <animated.div style={trail[6]}>
-        <a href="/#team">The Team</a>
-      </animated.div>
-      <animated.div style={{ ...trail[7], ...{ marginBottom: "30%" } }}>
-        <Link to="/terms">Terms</Link>
-      </animated.div>
-      <animated.div className="nav-social" style={trail[8]}>
+      <animated.div className="nav-social" style={trail[7]}>
         <a
           href="https://twitter.com/degenapeacademy"
           target="_blank"
@@ -64,8 +58,9 @@ export default function NavList({
           <Discord />
         </a>
       </animated.div>
-
-      {/*       <PrimaryButton onClick={() => console.log("hi")}>MINT</PrimaryButton> */}
+      <animated.div style={{ ...trail[7], ...{ marginBottom: "30%" } }} className="termsMain">
+        <Link to="/terms"><span className="termsLink">Terms & Conditions</span></Link>
+      </animated.div>
     </div>
   );
 }

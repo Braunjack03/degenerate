@@ -1,111 +1,123 @@
 .navbar {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: start;
-  align-items: center;
-  left: 0;
-  width: inherit;
-  padding: 1% 10% 0 10%;
-  position: relative;
-  background-color: var(--dark-blue);
-
-  svg {
-    width: 25%;
-    height: auto;
-  }
-  .nav-drawer {
-    overflow-y: hidden !important;
-  }
-
-  > div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
     align-items: center;
-    .left-nav {
-      position: relative;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      width: 100%;
-      height: 100%;
+    left: 0;
+    width: inherit;
+    padding: 1% 10% 0 10%;
+    position: relative;
+    background-color: var(--dark-blue);
+    svg {
+        width: 25%;
+        height: auto;
     }
-  }
-  .nav-list,
-  #ham-icon,
-  div {
-    justify-self: end;
-  }
+    .nav-drawer {
+        overflow-y: hidden !important;
+    }
+    .left-nav-main {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .left-nav {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .nav-list,
+    #ham-icon,
+    div {
+        justify-self: end;
+    }
 }
 
 .monke {
-  width: 30%;
-  background-color: var(--light-blue);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 1%;
-  > svg {
-    width: 25%;
-    height: auto;
-  }
+    width: 30%;
+    background-color: var(--light-blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1%;
+    >svg {
+        width: 25%;
+        height: auto;
+    }
 }
+
 .logo {
-  width: 30%;
-  background-color: var(--dark-blue);
-  height: 100vh;
+    width: 30%;
+    background-color: var(--dark-blue);
+    height: 100vh;
 }
 
 .MuiDrawer-paperAnchorRight {
-  width: 100%;
-  background-color: var(--darker-blue) !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden;
-  flex-direction: row !important;
-  overflow-y: hidden !important;
+    width: 100%;
+    background-color: var(--darker-blue) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    flex-direction: row !important;
+    overflow-y: hidden !important;
 }
 
 @media (max-width: 992px) {
-  .MuiDrawer-paperAnchorRight {
-    width: 100%;
-  }
-
-  .navbar {
-    svg {
-      width: 80px;
+    .MuiDrawer-paperAnchorRight {
+        width: 100%;
     }
-  }
+    .navbar {
+        svg {
+            width: 80px;
+        }
+    }
 }
 
 .open-menu {
-  transform: translateX(-35%);
-}
-@media (max-width: 992px) {
+    transform: translateX(-35%);
 }
 
 @media (max-width: 992px) {
-  .open-menu {
-    transform: translateX(-150%);
-  }
+    .open-menu {
+        transform: translateX(-150%);
+    }
+    .left-nav-main {
+        width: 100% !important;
+        height: 50%;
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        .left-nav {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
+
 @media (min-width: 1200px) and (max-width: 1400px) {
-  :root {
-    --content-radius: 75px;
-  }
+     :root {
+        --content-radius: 75px;
+    }
 }
 
 @media (min-width: 1400px) and (max-width: 2500px) {
-  :root {
-    --content-radius: 75px;
-  }
+     :root {
+        --content-radius: 75px;
+    }
 }
 
 @media (min-width: 2500px) {
-  .open-menu {
-    transform: translateX(-36%);
-  }
+    .open-menu {
+        transform: translateX(-36%);
+    }
 }
