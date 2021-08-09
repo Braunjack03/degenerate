@@ -1,0 +1,145 @@
+@media only screen and (max-width: 600px) {
+  .rarities {
+    padding: 0 !important;
+  }
+  .rarity-intro {
+    width: 100% !important;
+  }
+  .rarity-intro_title {
+    font-size: 4vw !important;
+  }
+  .rarity-intro_p {
+    font-size: 3vw !important;
+  }
+  .rarity-intro_inner {
+    height: 100% !important;
+  }
+  .rarity-types_name {
+    font-size: 2.5vw !important;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .rarities {
+    padding: 0 !important;
+  }
+  .rarity-intro_title {
+    font-size: 4vw !important;
+  }
+  .rarity-intro_p {
+    font-size: 3vw !important;
+  }
+  .rarity-intro_inner {
+    height: 100% !important;
+  }
+  .rarity-types_name {
+    font-size: 2vw !important;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .rarity-intro_title {
+    font-size: 2vw !important;
+  }
+  .rarity-intro_p {
+    font-size: 1.5vw !important;
+  }
+  .rarity-types_name {
+    font-size: 1.5vw !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .rarities {
+    height: 60%;
+    margin-top: 20% !important;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .rarities {
+    margin-top: 5% !important;
+    height: 80% !important;
+  }
+}
+.rarities {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7vw;
+}
+.rarity-intro {
+  width: 50%;
+  background-image: url(../../../../../../assets/images/pictures/backgrounds/purple-banana-background.svg);
+  border-radius: 2vw;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-position-y: center;
+  background-position-x: center;
+}
+.rarity-intro_inner {
+  height: 50%;
+  padding: 3vw;
+}
+.rarity-intro_title {
+  margin-top: 0;
+  font-size: 2.5vw;
+}
+.rarity-intro_p {
+  font-family: var(--content-font);
+  font-size: 1vw;
+}
+
+.rarity-types {
+  width: 40%;
+}
+.rarity-types_ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0;
+}
+.rarity-types_li {
+  border-radius: 0.7vw;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rarity-types_name {
+  border-radius: 0.5vw;
+  height: 3vw;
+  font-size: 2vw;
+  width: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rarity-types_li:nth-child(1) {
+  border: var(--common) 1px solid;
+}
+.rarity-types_li:nth-child(2) {
+  border: var(--uncommon) 1px solid;
+}
+.rarity-types_li:nth-child(3) {
+  border: var(--rare) 1px solid;
+}
+.rarity-types_li:nth-child(4) {
+  border: var(--veryrare) 1px solid;
+}
+.rarity-types_li:nth-child(5) {
+  border: var(--mythic) 1px solid;
+}
+.rarity-types_li:nth-child(1) .rarity-types_name {
+  background-color: var(--common);
+}
+.rarity-types_li:nth-child(2) .rarity-types_name {
+  background-color: var(--uncommon);
+}
+.rarity-types_li:nth-child(3) .rarity-types_name {
+  background-color: var(--rare);
+}
+.rarity-types_li:nth-child(4) .rarity-types_name {
+  background-color: var(--veryrare);
+}
+.rarity-types_li:nth-child(5) .rarity-types_name {
+  background-color: var(--mythic);
+}

@@ -1,0 +1,84 @@
+.hp-roadmap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  background-color: var(--dark-blue);
+  padding: 8% 7%;
+  border-radius: var(--content-radius);
+  margin-bottom: 5% !important;
+  background-image: url(../../../../../../assets/images/pictures/backgrounds/purple-banana-background.png);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .hp-rm-content {
+    width: 70%;
+    padding: 2%;
+  }
+  > svg {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    right: -6%;
+    top: -6%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hp-roadmap {
+    margin-top: 25%;
+    .hp-rm-content {
+      width: 90%;
+    }
+    > svg {
+      height: 30%;
+      width: auto;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      transform: translate(13%, -15%) rotate(-10deg);
+    }
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  :root {
+    --content-radius: 75px;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 2500px) {
+  .hp-roadmap {
+    .hp-rm-content {
+      h1 {
+        font-size: 60px;
+      }
+    }
+    > svg {
+      height: 90%;
+      width: auto;
+      position: absolute;
+      right: -8%;
+      top: -6%;
+    }
+  }
+}
+
+@media (min-width: 2500px) {
+  .hp-roadmap {
+    padding: 5% 6%;
+    .hp-rm-content {
+      width: 80%;
+      h1 {
+        font-size: 130px;
+      }
+    }
+    > svg {
+      height: 90%;
+      width: auto;
+      position: absolute;
+      right: -6.5%;
+      top: -6%;
+    }
+  }
+}

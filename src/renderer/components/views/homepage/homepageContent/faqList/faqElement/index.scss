@@ -1,0 +1,148 @@
+@media only screen and (max-width: 600px) {
+  h1.title {
+    font-size: 5vw !important;
+  }
+  p.info {
+    font-size: 4vw !important;
+  }
+}
+@media only screen and (min-width: 600px) {
+  h1.title {
+    font-size: 3.5vw !important;
+  }
+  p.info {
+    font-size: 2.5vw !important;
+  }
+}
+@media screen and (min-width: 720px) {
+  h1.title {
+    font-size: 2.5vw !important;
+  }
+  p.info {
+    font-size: 1.5vw !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  h1.title {
+    font-size: 1.5vw !important;
+  }
+  p.info {
+    font-size: 1vw !important;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  h1.title {
+    font-size: 1.5vw !important;
+  }
+  p.info {
+    font-size: 1vw !important;
+  }
+}
+
+button.faq-outer {
+  border: none;
+  background: none;
+  color: white !important;
+  :focus {
+    outline: none !important;
+    border: none;
+  }
+}
+
+.inner {
+  border-radius: 10vw;
+  display: flex;
+  background: var(--c2);
+  flex-direction: column;
+  justify-content: center;
+
+  .title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 4vw;
+  }
+  h1.title {
+    font-size: 1.5vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  }
+  p.info {
+    margin-left: 4vw;
+    margin-right: 10vw;
+    font-size: 1vw;
+    display: none;
+    font-family: var(--content-font);
+    margin-bottom: 3vw;
+    margin-top: 0;
+    word-spacing: normal;
+  }
+  .moreless {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--rare);
+    margin: auto;
+    width: 5vw;
+    clip-path: circle(20%);
+    transition: 0.3s;
+    margin-right: 4vw;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0px;
+    color: burlywood;
+    height: 2vw;
+    padding: 10px;
+    transition: 0.3s;
+  }
+  .faq-svg {
+    height: 1.2vw;
+  }
+
+  .info-container {
+    display: none;
+  }
+  .info-container.open {
+    display: block;
+    text-align: initial;
+  }
+  .info-container.open p {
+    display: block;
+  }
+}
+
+.inner.open {
+  background: var(--c3);
+  border: white 2px solid;
+  transition: all 1s ease-in-out;
+}
+.faq-outer:hover {
+  .fidget {
+    transition: 0.3s;
+    font-size: 15px;
+    color: purple;
+    transform: rotate(360deg);
+  }
+  .moreles {
+    transition: 0.3s;
+    clip-path: circle(20%);
+    border: 1px purple solid;
+    background-color: var(--veryrare);
+  }
+}
+.faq-outer:active {
+  .moreless {
+    transition: 0.01s;
+    background: var(--c2) !important;
+  }
+
+  .moreless span {
+    transition: 0.01s;
+    transform: rotate(180deg);
+  }
+}
