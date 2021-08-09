@@ -3,6 +3,7 @@ import "./index.scss";
 import ApeintoshPopupWindow from "../../../../../../common/apeintosh/apeintoshPopupWindow.tsx/ApeintoshPopupWindow";
 import ApeintoshButton from "../../../../../../common/apeintosh/apeintoshButton/ApeintoshButton";
 import useCountdown from "../../../../../../../hooks/useCountdown";
+import mint from "../../../../../../../../utils/mint/mintApe";
 
 export default function MintingCountdown({
   open,
@@ -19,7 +20,18 @@ export default function MintingCountdown({
         <div className="minting-countdown">
           {timeLeft.days}:{timeLeft.hours}:{timeLeft.min}:{timeLeft.sec}
         </div>
-        <ApeintoshButton className="minting-button" onClick={handleClose}>
+        <ApeintoshButton
+          className="minting-button"
+          onClick={() => {
+            handleClose();
+            mint({
+              apes: [
+                "https://degenape.academy/assets/images/DAA_Logo.png",
+                "https://degenape.academy/assets/images/DAA_Logo.png",
+              ],
+            });
+          }}
+        >
           FUCK, OK
         </ApeintoshButton>
       </div>

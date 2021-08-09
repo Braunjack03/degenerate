@@ -1,4 +1,4 @@
-import { PublicKey, Transaction } from "@solana/web3.js";
+import { Connection, PublicKey, Transaction } from "@solana/web3.js";
 import Wallet from "@project-serum/sol-wallet-adapter";
 type PhantomEvent = "disconnect" | "connect";
 type PhantomRequestMethod =
@@ -27,6 +27,7 @@ export interface IGlobalData {
   connected: boolean;
   wallet: WalletProvider | null;
   screenLoading: boolean;
+  connection: Connection;
 }
 
 export type TCryptoWallet = WalletProvider;

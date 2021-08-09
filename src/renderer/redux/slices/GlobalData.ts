@@ -1,10 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Connection } from "@solana/web3.js";
 import { IGlobalData } from "../../api/types/globalData";
 
 const initialState: IGlobalData = {
   connected: false,
   wallet: null,
   screenLoading: true,
+  connection: new Connection("https://api.devnet.solana.com"),
 };
 
 const globalDataSlice = createSlice({
