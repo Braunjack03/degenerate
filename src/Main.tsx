@@ -13,6 +13,7 @@ import Loader from "./renderer/components/views/loader/Loader";
 import { useEffect } from "react";
 import useReduxState from "./renderer/hooks/useReduxState";
 export default function Main(): JSX.Element {
+  /* eslint-disable react-hooks/exhaustive-deps */
   const [{ screenLoading: loading }, setLoading] = useReduxState(
     (state) => state.globalData
   );

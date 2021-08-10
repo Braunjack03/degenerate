@@ -50,7 +50,6 @@ export const createSerializedData = ({
         kind: "struct",
         fields: [
           ["uri_vec", [uri_vec.length]],
-          ,
           ["name", "string"],
           ["symbol", "string"],
           ["max_supply", "u64"],

@@ -16,7 +16,7 @@ import BackGround from "../../../../../../assets/images/pictures/traits/Backgrou
 import Teeth from "../../../../../../assets/images/pictures/traits/Teeth.svg";
 import Clothing from "../../../../../../assets/images/pictures/traits/Body.svg";
 import Eyewear from "../../../../../../assets/images/pictures/traits/Glasses.svg";
-import _ from "lodash";
+/* import _ from "lodash"; */
 
 // install Swiper modules
 SwiperCore.use([EffectCoverflow, Navigation]);
@@ -64,7 +64,6 @@ export default function RarityCarousel({
         break;
     }
     if (!loading) {
-     
       switch (rarities) {
         case "All":
           setImageArray(data.getRarityImages.All);
@@ -92,7 +91,7 @@ export default function RarityCarousel({
   }, [filter, loading, rarities]);
 
   if (loading) {
-    return <h1>Loading...</h1> ;
+    return <h1>Loading...</h1>;
   } else if (imageArray?.length === 0) {
     return (
       <Swiper
@@ -122,9 +121,9 @@ export default function RarityCarousel({
         }}
       >
         <SwiperSlide>
-          <div style={{display:"flex",flexDirection:"column"}}>
-          <h2 style={{width:"100%"}}>No Images to show..</h2>
-          <h2 style={{width:"100%"}}>please choose another filter </h2>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <h2 style={{ width: "100%" }}>No Images to show..</h2>
+            <h2 style={{ width: "100%" }}>please choose another filter </h2>
           </div>
         </SwiperSlide>
       </Swiper>
@@ -159,7 +158,6 @@ export default function RarityCarousel({
           },
           "980": {
             slidesPerView: 3,
-
           },
         }}
       >
@@ -175,13 +173,15 @@ export default function RarityCarousel({
             </>
           );
         })}
-        <div className={`label-wrapper ${
-              rarities === "All"
-                ? getRarityName(imageArray![activeIndex]).toString()
-                : rarities === "Super Rare"
-                ? "super-rare"
-                : rarities.toLowerCase()
-            }-border`} >
+        <div
+          className={`label-wrapper ${
+            rarities === "All"
+              ? getRarityName(imageArray![activeIndex]).toString()
+              : rarities === "Super Rare"
+              ? "super-rare"
+              : rarities.toLowerCase()
+          }-border`}
+        >
           <div
             className={`inner-wrapper ${
               rarities === "All"
@@ -193,14 +193,16 @@ export default function RarityCarousel({
           >
             {activeIndex < imageArray?.length! ? (
               <span className="left-label">
-                <p id="top-label" style={{textAlign:"left"}}>
+                <p id="top-label" style={{ textAlign: "left" }}>
                   {getName(imageArray![activeIndex])}
                 </p>
                 <p id="bottom-line">Rarity %: TBD</p>
               </span>
             ) : (
               <span className="left-label">
-                <p id="top-label" style={{textAlign:"left"}}>{getName(imageArray![0])}</p>
+                <p id="top-label" style={{ textAlign: "left" }}>
+                  {getName(imageArray![0])}
+                </p>
                 <p id="bottom-line">Rarity %: TBD</p>
               </span>
             )}
@@ -211,18 +213,19 @@ export default function RarityCarousel({
             />
             <span className="right-label">
               <span>
-              <p id="top-label" style={{margin:0,textAlign: "right" }}>
-                {filter.toLocaleUpperCase()}
-              </p>
-              <p style={{ textAlign: "right" }} id="bottom-line">
-                {rarities === "All"
-                  ? getName(getRarityName(imageArray![activeIndex]).toString())
-                  : rarities.toUpperCase()}
-              </p>
+                <p id="top-label" style={{ margin: 0, textAlign: "right" }}>
+                  {filter.toLocaleUpperCase()}
+                </p>
+                <p style={{ textAlign: "right" }} id="bottom-line">
+                  {rarities === "All"
+                    ? getName(
+                        getRarityName(imageArray![activeIndex]).toString()
+                      )
+                    : rarities.toUpperCase()}
+                </p>
               </span>
               <img src={Logo} id="logo-trait" alt="" />
             </span>
-           
           </div>
         </div>
       </Swiper>
