@@ -15,14 +15,16 @@
     font-style: normal;
 }
 
-// @font-face {
-//     font-family: "azo-sans-web";
-//     src: url("https://use.typekit.net/emt8wxl.css");
-//     font-weight: 900;
-//     font-style: normal;
-// }
+
+/* @font-face {
+  font-family: "azo-sans-web";
+  src: url("https://use.typekit.net/emt8wxl.css");
+  font-weight: 900;
+  font-style: normal;
+} */
+
 @font-face {
-    font-family: "Azo Sans Uber-Regular";
+    font-family: "azo-sans";
     src: url("./assets/fonts/AzoSans.ttf");
     font-weight: bold;
     font-style: normal;
@@ -48,7 +50,6 @@
     --super-light-blue: #d0fffa;
     --console-font: "lores-12", monospace;
     --title-font: "Paytone One", sans-serif;
-    --heading-font: "azo-sans-web, sans-serif";
     --content-font: "bicyclette", sans-serif;
     --subtitle-font: "Paytone One", sans-serif;
     --common: #c6a890;
