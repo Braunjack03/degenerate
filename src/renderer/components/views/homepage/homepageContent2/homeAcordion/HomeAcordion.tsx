@@ -19,7 +19,8 @@ export default function HomeAcordion({
     <div className="hp-acordion">
       <Accordion
         style={{
-          backgroundColor: expanded ? "var(--light-blue)" : "var(--dark-blue)",
+          backgroundColor: expanded ? "var(--light-blue)" : "#2E1964",
+          border: expanded ? "1.5px solid #fff" : "none",
           transition: "0.5s",
         }}
         expanded={expanded}

@@ -1,10 +1,21 @@
+import React from 'react';
 import "./index.scss";
-export default function ApesRemaining(): JSX.Element {
-  return (
-    <div className="apes-r">
-      <p>Coming soon!</p>
-      <h3>Apes Remain:</h3>
-      <p>10,000/10,000</p>
-    </div>
-  );
+import Countdown from 'react-countdown';
+
+const Completionist = () => <span>Boooom!</span>;
+
+function App() {
+
+    return (
+
+        <div className="apes-r">
+            <h3>Going live in:</h3>
+            <Countdown date={Date.now() + 1000 * 60 * 60 * 24 * 2}>
+                <Completionist />
+            </Countdown>
+        </div>
+
+    )
+
 }
+export default App;

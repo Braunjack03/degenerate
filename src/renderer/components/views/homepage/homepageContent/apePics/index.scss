@@ -1,95 +1,91 @@
 @media only screen and (max-width: 600px) {
-  .apes-pics {
-    display: grid;
-    grid-auto-rows: minmax(120px, auto);
-    grid-gap: 20px;
-    gap: 10px;
-    max-width: 100%;
-    justify-items: center;
-    grid-template-areas:
-      "dona"
-      "astronaut"
-      "roman";
-  }
-  .ape-pic {
-    width: 50%;
-    border-radius: 4vw;
-    margin: 0;
-  }
+    .apes-pics {
+        display: grid;
+        grid-auto-rows: minmax(120px, auto);
+        grid-gap: 20px;
+        gap: 10px;
+        max-width: 100%;
+        justify-items: center;
+        grid-template-areas: "dona" "astronaut" "roman";
+    }
+    .ape-pic {
+        width: 50%;
+        border-radius: 4vw;
+        margin: 0;
+    }
 }
+
 @media only screen and (min-width: 600px) {
-  .apes-pics {
-    display: grid;
-    grid-auto-rows: minmax(200px, auto);
-    grid-gap: 20px;
-    gap: 20px;
-    max-width: 100%;
-    justify-items: center;
-    grid-template-areas:
-      "dona"
-      "astronaut"
-      "roman";
-  }
-  .ape-pic {
-    width: 40%;
-    border-radius: 4vw;
-    margin: 0;
-  }
+    .apes-pics {
+        display: grid;
+        grid-auto-rows: minmax(200px, auto);
+        grid-gap: 20px;
+        gap: 20px;
+        max-width: 100%;
+        justify-items: center;
+        grid-template-areas: "dona" "astronaut" "roman";
+    }
+    .ape-pic {
+        width: 40%;
+        border-radius: 4vw;
+        margin: 0;
+    }
 }
 
 @media screen and (min-width: 720px) {
-  .apes-pics {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(200px, auto);
-    grid-gap: 10px;
-    max-width: 100%;
-    margin: 0 auto;
-    grid-template-areas: "dona astronaut roman";
-  }
-  .ape-pic {
-    width: 95%;
-    border-radius: 4vw;
-    margin: 0;
-  }
+    .apes-pics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(200px, auto);
+        grid-gap: 10px;
+        max-width: 100%;
+        margin: 0 auto;
+        grid-template-areas: "dona astronaut roman";
+    }
+    .ape-pic {
+        width: 95%;
+        border-radius: 4vw;
+        margin: 0;
+    }
 }
+
 @media only screen and (min-width: 992px) {
-  .apes-pics {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 10px;
-    max-width: 100%;
-    margin: 0 auto;
-    grid-template-areas:
-      "dona astronaut roman"
-      "dona astronaut roman"
-      "dona astronaut roman";
-  }
-  .ape-pic {
-    width: 95%;
-    border-radius: 4vw;
-    margin: 0;
-  }
+    .apes-pics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-gap: 10px;
+        max-width: 100%;
+        margin: 0 auto;
+        grid-template-areas: "dona astronaut roman" "dona astronaut roman" "dona astronaut roman";
+    }
+    .ape-pic {
+        width: 95%;
+        border-radius: 4vw;
+        margin: 0;
+    }
 }
 
 .apes-pics {
-  padding: 0;
-  align-items: center;
+    padding: 0;
+    align-items: center;
 }
+
 .ape-pic {
-  border: var(--c3) 0.25vw solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    border: var(--c3) 0.25vw solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ape-pic:nth-child(n + 1) {
-  grid-area: dona;
+    grid-area: dona;
 }
+
 .ape-pic:nth-child(2) {
-  grid-area: astronaut;
+    grid-area: astronaut;
 }
+
 .ape-pic:nth-child(3) {
-  grid-area: roman;
+    grid-area: roman;
 }

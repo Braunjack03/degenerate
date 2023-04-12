@@ -33,7 +33,7 @@ export default function Navbar(): JSX.Element {
     <div className="navbar">
       
       <NavIcon onClick={()=>history.push('/')} style={isMobile ? {} : { zIndex: 2000 }} />
-      <div>
+      <div className="left-nav-main">
         <div className="left-nav" ref={leftNav}>
           <ConnectButton
             navRef={leftNav}
